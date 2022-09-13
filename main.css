@@ -1,0 +1,140 @@
+:root{
+    --color--white: hsl(0, 0%, 100%);
+    --color-primary: hsl(158, 36%, 37%);
+    --color-primary-cream: hsl(30, 38%, 92%);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    background-color: var(--color-primary-cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    box-shadow: 0 0 20px #fff;
+    max-width: 320px;
+    clip-path: inset(1% 0% 0% 1% round 10px);
+}
+
+.product{
+    width: 100%;
+}
+
+.product__box{
+    padding: 10px 10px 14px;
+    background-color: #fff;
+}
+
+.product__box p:first-of-type,
+.product__box p:last-of-type{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: hsl(228, 12%, 48%);
+}
+
+.product__box p:first-of-type{
+    margin-bottom: 8px;
+    letter-spacing: 4px;
+}
+
+h1{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.line--height{
+    line-height: 20px;
+    margin-bottom: 14px;
+}
+
+.span{
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.span:first-of-type{
+    font-size: 2.5rem;
+    margin-right: 10px;
+}
+
+.span:last-of-type{
+    text-decoration: line-through;
+    font-size: 1rem;
+    color: rgb(48, 51, 49);
+}
+
+.primary--color{
+    color: var(--color-primary);
+}
+
+.font--bold{
+    font-weight: 700;
+}
+
+
+.btn{
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 7px;
+    padding: 1.3rem 10rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    transition: background-color 0.25s;
+}
+
+.btn:active{
+    background-color: hsl(158, 67%, 10%);
+    outline: 0;
+}
+
+img{
+    width: 14px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width:768px) {
+    .product__image{
+        background-color: #fff;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 640px;
+    }
+
+    .product{
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .product__box{
+        padding-left: 19px;
+        padding-top: 19px;
+        padding-bottom: 19px;
+    }
+
+    .btn{
+        padding: 1rem 9rem;
+    }
+
+    img{
+        width: 12px;
+    }
+}
